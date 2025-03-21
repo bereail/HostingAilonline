@@ -1,0 +1,140 @@
+.inicioSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../../assets/img/fondoInicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    animation: zoomInBackground 10s infinite alternate;
+}
+
+.inicioSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+
+.inicioContent {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.inicioContent h1 {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    margin: 0;
+}
+
+.inicioContent h1 span {
+    display: block;
+    line-height: 1.3;
+}
+
+.inicioParagraph, .inicioParagraphExplora {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
+}
+
+.inicioParagraph {
+    font-size: 1rem;
+}
+
+.inicioParagraphExplora {
+    font-size: 1.2rem;
+}
+
+.inicioButtonsContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap;
+}
+
+.inicioButtonNaranja {
+    padding: 15px 30px;
+    background-color: #D2E965;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicioButtonNaranja:hover {
+    color: white;
+    background-color: #0D6D95;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .inicioContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicioParagraph {
+        font-size: 1.1rem;
+    }
+
+    .inicioButtonNaranja {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .inicioButtonsContainer {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicioContent h1 {
+        font-size: 2rem;
+    }
+
+    .inicioParagraph {
+        font-size: 1rem;
+    }
+
+    .inicioButtonNaranja {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .inicioButtonsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes zoomInBackground {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}

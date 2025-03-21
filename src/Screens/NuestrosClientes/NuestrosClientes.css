@@ -1,0 +1,24 @@
+/* NuestrosClientes.css */
+.client-logo {
+    width: 100%;
+    min-height: 200vh;
+    max-width: 120px;  /* Tamaño máximo para que no se deforme */
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  
+  /* Ajuste de los botones de navegación */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none; /* Ocultar botones en móviles */
+    }
+  }
+  

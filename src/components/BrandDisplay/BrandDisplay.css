@@ -1,0 +1,24 @@
+/* Estilo para las imágenes de los logos dentro del carrusel */
+.client-logo {
+    width: 100%;  /* La imagen ocupa el 100% del ancho disponible de la diapositiva */
+    max-width: 150px;  /* Establecemos un tamaño máximo para evitar que las imágenes sean demasiado grandes */
+    height: auto;  /* Mantenemos la relación de aspecto de la imagen */
+    display: block;  /* Cambiamos la imagen a un bloque para que ocupe todo el contenedor */
+    margin: auto;  /* Centramos la imagen dentro de su contenedor */
+}
+
+/* Estilos para los botones de navegación (flechas) */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333;  /* Color gris oscuro para las flechas de navegación */
+    font-size: 18px;  /* Tamaño de fuente de las flechas */
+}
+
+/* Estilos responsivos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;  /* Ocultamos las flechas de navegación en pantallas móviles */
+    }
+}
+

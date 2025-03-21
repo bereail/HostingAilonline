@@ -1,0 +1,106 @@
+#Contacto {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.section-contacto {
+    padding: 80px 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.title-contacto {
+    align-self: flex-start;
+    margin-bottom: 36px;
+    font-weight: bold !important;
+    color:  rgba(19, 20, 20, 0.9);
+}
+
+.texto-parpadeante {
+    animation: parpadeo 1s infinite; 
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0.6; /* Invisible */
+    }
+}
+
+
+.datos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.buttons-contacto button {
+    margin: 16px 0;
+    padding: 12px 24px; /* Aumenta el tamaño del padding */
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    border-radius: 12px; /* Agranda los bordes redondeados */
+    color: #0D6D95;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn-contactar,
+.btn-contactar:active {
+    background-color: #191a17;
+}
+
+.btn-contactar:hover {
+    background-color: #0D6D95;
+}
+
+
+
+.btn-contactar:hover,
+.btn-cotizar:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.btn-contactar:focus,
+.btn-cotizar:focus {
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-contactar:active,
+.btn-cotizar:active {
+    transform: scale(0.95);
+}
+
+
+
+@media (max-width: 768px) {
+    .section-contacto {
+        flex-direction: column;
+    }
+
+    .container-contacto {
+        padding: 20px;
+    }
+    
+    .title-contacto {
+        text-align: center;
+    }
+
+    .buttons-contacto button {
+        width: 100%;
+        padding: 10px;
+    }
+}
