@@ -1,120 +1,84 @@
-/* Navbar principal */
-
-.green {
-  background-color: #c8b400; 
-  transition: background-color 0.3s ease; /* Add smooth transition */
+.navbar {
+  position: sticky !important; /* !important después de la propiedad */
+  top: 0;
+  width: 100%;
+  background-color: #ebebec;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(170, 176, 207, 0.2);
 }
 
 
-.navbar {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 10;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
-  padding: 10px 0;
+.navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* NavBar.module.css */
-.green {
-  background-color: green !important; /* Cambia el fondo a verde */
-  transition: background-color 0.3s ease; /* Animación suave */
-}
-
-/* Fondo transparente */
-.transparent {
-  background-color: rgba(255, 165, 0, 0);
-  box-shadow: none;
-}
-
-/* Fondo sólido */
-.solid {
-  background: linear-gradient(to right, #252727, #d8e2e0);
-  box-shadow: 0 4px 10px #00000033;
-}
-
-
-
-/* Estilos del logo */
-.logo {
-  height: 80px;
-  width: 170px;
-  margin: 0 auto; /* Centra el logo */
-  display: block;
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Elimina cualquier borde */
-  box-shadow: none; /* Elimina cualquier sombra */
-  opacity: 020; /* Reduce la opacidad al 80% */
-}
-
-
-@media (max-width: 576px) {
-  .logo {
-    height: 50px;
-    width: auto;
-  }
-  .nav-link {
-    font-size: 1rem;
-    padding: 8px 5px;
-  }
-}
-
-/* Contenedor de los enlaces */
-.navbar-nav {
-  display: flex;
-  justify-content: center; /* Centra los enlaces */
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-/* Estilo de los enlaces de la navbar */
-.nav-link {
-  color: white !important; /* Color de letra blanco */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
-  letter-spacing: 0.3rem !important;
-  font-weight: bold !important;
-  font-size: 1rem !important; /* Aumentar el tamaño de la fuente */
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 12px 10px; /* Aumentar el padding para mejorar el área clickeable */
-}
-
-/* Efecto hover de los enlaces */
-.nav-link:hover {
-  color: rgb(42, 46, 105) !important;
-  transform: scale(1.05);
-}
-
-/* Estilo de enlace activo */
-.nav-link.active {
-  color: #f9f9f9 !important;
-  text-decoration: underline;
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar-nav {
-    display: block;
-    text-align: center;
-  }
-
-  .nav-link {
-    font-size: 1.8rem; /* Aumentar el tamaño en pantallas pequeñas */
-    letter-spacing: 0.1rem;
-  }
-
-/* Logo styles */
-.logo {
-  height: 70px;
-  width: 150px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: block;
-  background-color: transparent !important; /* Ensures background is transparent */
-  border: none !important;
-  box-shadow: none !important;
+  padding: 0 20px;
 }
 
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.navbarLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  color: #000; 
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.navLink:active {
+  background-color: #777;
+}
+
+/* 🔥 Responsive - Modo Móvil */
+@media screen and (max-width: 768px) {
+  .menuButton {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .navbarLinks {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: #ebebec;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;  /* Ocultamos por defecto */
+  }
+
+  /* Mostrar menú cuando se active */
+  .navbarLinks.active {
+      display: flex;
+  }
+
+  .navItem {
+      margin: 10px 0;
+      text-align: center;
+  }
 }

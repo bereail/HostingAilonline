@@ -1,26 +1,18 @@
-/* Footer.module.css */
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
-  
-  
+  background-color: #000; /* fondo negro */
+  color: #fff;            /* texto blanco */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
   .footer {
-      background-color: #0e0f0f;
-      color: e3f57f; /* Color del texto */
-      text-align: center; /* Centrar el contenido */
-      padding: 20px 0; /* Espacio alrededor del texto */
-      font-size: 0.9rem; /* Tamaño del texto */
-      /* Fija el footer en la parte inferior */
-      bottom: 0;
-      width: 100%; /* Ocupa todo el ancho de la pantalla */
-    }
-    
-    .footer p {
-      margin: 0; /* Elimina el margen alrededor del texto */
-    }
-    
-  
+    font-size: 0.85rem;
+    padding: 15px 5px;
+  }
+}

@@ -1,0 +1,143 @@
+.sectionFilosofiaContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    padding: 00px 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .contentFilosofiaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .content-filosofia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .content-filosofia.slide-left {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  
+  .content-filosofia.slide-right {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  
+  .title {
+    color: #238973;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .img {
+    width: 20rem;
+    height: auto;
+    margin-bottom:10px;
+    margin-top:20px;
+  }
+  
+  @media (max-width: 1080px) {
+    .sectionFilosofiaContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+  
+    .contentFilosofiaContainer {
+      align-items: center;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 1.3rem;
+    }
+  
+    .img {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sectionFilosofiaContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    .contentFilosofiaContainer {
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .content-filosofia {
+      margin: 20px 0;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .description {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sectionFilosofiaContainer {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .contentFilosofiaContainer {
+      align-items: center;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .description {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+  }

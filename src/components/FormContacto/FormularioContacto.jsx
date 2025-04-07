@@ -40,7 +40,7 @@ const FormularioContacto = ({ handleModalToggle }) => {
             </span>
           </div>
           <div className="modal-body">
-            <form ref={form} className="formulario-contacto form" onSubmit={sendEmail}>
+            <form ref={form} className="form" onSubmit={sendEmail}>
               <label>Nombre:</label>
               <input type="text" name="user_name" className="form-control" required />
               <label>Email:</label>

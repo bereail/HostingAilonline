@@ -1,72 +1,68 @@
-import React, { useState, useEffect } from 'react';
+// Nosotros.js
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
-import FormularioContacto from '../../components/FormContacto/FormularioContacto';
+
 
 function Nosotros() {
   const [isCardVisible, cardRef] = useObserver();
-  const [isTitleVisible, setIsTitleVisible] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModalToggle = () => setIsModalOpen(!isModalOpen);
+  const [isTitleVisible, setIsTitleVisible] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
+    // Hacer que el título se vuelva visible después de un tiempo
     const timer = setTimeout(() => {
       setIsTitleVisible(true);
-    }, 500);
+    }, 500); // El título aparece después de 500ms
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="Nosotros">
+    <div className="container-nosotros">
+
       <div className="banner-nosotros">
         <div className="banner-image"></div>
         <h3 className="text-overlay">
+          <span className="sobre">SOBRE</span>
           <span className="nosotros">NOSOTROS</span>
         </h3>
       </div>
 
-      <div className='nosotros'>
+
+      <div className='quienes-somos'>
         <h3 className={`title-nosotros ${isTitleVisible ? 'animate' : ''}`}>
-          TITULO
+          ¿Quiénes Somos?
         </h3>
 
-        <section className={`section descripcion-empresa ${isTitleVisible ? 'fadeIn' : ''}`}>
-          <div ref={cardRef} className={`card-descripcion-empresa ${isCardVisible ? 'animate' : ''}`}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis consectetur, iusto ab enim hic perferendis a doloremque, facilis tempore alias vitae dolorem debitis odit beatae cupiditate officia tempora illum?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quas necessitatibus fuga aspernatur quisquam vero sequi ipsa repellat rerum, ut sunt enim illo molestias a nam praesentium fugit, quaerat architecto.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos, aliquid blanditiis soluta non magni magnam unde accusantium nulla sed, itaque nemo nesciunt nostrum corrupti illo doloribus natus adipisci aperiam?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi id ipsam eaque! A repudiandae quos ipsam inventore amet non eaque quaerat deleniti quam quae fugiat voluptate numquam, deserunt ut..
-            </p>
-          </div>
-
-          <button
-            className="btn-contacto"
-            onClick={() => {
-              const contactoSection = document.getElementById('contacto');
-              if (contactoSection) {
-                contactoSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+        <section
+          className={`section descripcion-empresa ${isTitleVisible ? 'fadeIn' : ''}`}
+        >
+          <div
+            ref={cardRef}
+            className={`card-descripcion-empresa ${isCardVisible ? 'animate' : ''}`}
           >
-            <div className='container-contacto buttons-contacto'>
-              <button className="btn btn-contactar" onClick={handleModalToggle}>
-                Quiero que me contacten
-              </button>
-            </div>
+            <p>
+              <strong>ULTRACORR SAS</strong> es una Empresa dedicada la fabricación de Envases especiales y a dar soluciones de packaging sostenible.
+            </p>
+            <p>
+              Nuestros productos y servicios están dirigidos tanto al mercado local como al internacional, buscando satisfacer las demandas de un público diverso y exigente, manteniendo un compromiso constante con la excelencia y la mejora continua.
+            </p>
+            <p>
+              Nos distinguimos por nuestra calidad, eficiencia y precios competitivos, elementos que nos posicionan como una opción preferente en el mercado.
+            </p>
+            <p>Para ello ofrecemos una solución de alta calidad en el diseño y desarrollo de envases de cartón corrugado, con soluciones individuales para desafíos en el packaging de su Empresa.</p>
+          </div>
+          <button className="btn-contacto" onClick={() => {
+            const contactoSection = document.getElementById('contacto');
+            if (contactoSection) {
+              contactoSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}>
+            Contáctenos
           </button>
         </section>
       </div>
-
-      {isModalOpen && <FormularioContacto handleModalToggle={handleModalToggle} />}
     </div>
   );
 }
