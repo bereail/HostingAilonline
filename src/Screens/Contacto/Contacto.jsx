@@ -15,7 +15,7 @@ const Contacto = () => {
       'service_7xq89yg',
       'template_dls7phe',
       form.current,
-      'kxyvlF5YpE5OwJa5D'
+      'ocz8SpUQwyTMBL8ih'
     ).then(
       (result) => {
         console.log('✅ Éxito:', result.text);
