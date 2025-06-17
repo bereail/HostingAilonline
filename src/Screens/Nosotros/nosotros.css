@@ -1,0 +1,257 @@
+.container-nosotros {
+    position: relative;
+    min-height: 210vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .p {
+    font-size: 2rem;
+  }
+  
+  .title-nosotros {
+    color: #238973 !important;
+    margin: 50px auto;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    animation: slideUp 1s ease-out 4s forwards;
+  }
+  .banner-nosotros {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/logo.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: bold;
+    z-index: 1;
+    line-height: 1.2;
+    animation: fadeIn 1s ease-out;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto auto;
+    text-align: left;
+  }
+  
+  .text-overlay .sobre,
+  .text-overlay .nosotros {
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.425); 
+    font-weight: bold;
+    color: #0D6D95;
+    font-size: 6rem;
+    display: block;
+  }
+  
+  
+  .quienes-somos {
+    margin-bottom: 20px;
+    background-image: url('../../assets/img/fondoInicio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .descripcion-empresa {
+    margin-bottom: 80px;
+    color: #0D6D95;
+  }
+  
+  .card-descripcion-empresa {
+    margin: 0 auto 20px;
+    padding: 20px 5px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: justify;
+    line-height: 1.6;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .card-descripcion-empresa h3 {
+    margin: 10px 0 16px;
+    font-size: 4rem;
+  }
+  
+  .btn-contacto {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-contacto:hover {
+    background-color: rgba(63, 200, 61, 1);
+  }
+  
+  .btn-contacto:active {
+    transform: scale(0.95);
+  }
+  
+  .btn-contacto:focus {
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-filosofia-container {
+    display: flex;
+  }
+  
+  .section-filosofia-container img {
+    margin-left: 36px;
+  }
+  
+  .content-filosofia-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-filosofia {
+    margin: 0 36px 20px;
+    padding: 30px 36px 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* --- Responsive Design --- */
+  @media (max-width: 1024px) {
+    .title-nosotros {
+      font-size: 3.5rem;
+    }
+  
+    .text-overlay {
+      font-size: 4rem;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .text-overlay .sobre,
+    .text-overlay .nosotros {
+      font-size: 4rem;
+    }
+  
+    .card-descripcion-empresa {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .card-descripcion-empresa h3 {
+      font-size: 3rem;
+    }
+  
+    .banner-image {
+      background-size: cover;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title-nosotros {
+      font-size: 2.5rem;
+    }
+  
+    .text-overlay {
+      font-size: 3rem;
+      top: 25%;
+      margin-left: 20px;
+      /* Agregamos un margen izquierdo */
+    }
+  
+    .text-overlay .sobre,
+    .text-overlay .nosotros {
+      font-size: 3rem;
+    }
+  
+    .card-descripcion-empresa {
+      font-size: 0.9rem;
+      padding: 15px;
+    }
+  
+    .btn-contacto {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title-nosotros {
+      font-size: 2rem;
+    }
+  
+    .text-overlay {
+      font-size: 2.5rem;
+      top: 20%;
+      margin-left: 15px;
+      /* Margen ajustado para pantallas más pequeñas */
+    }
+  
+    .text-overlay .sobre,
+    .text-overlay .nosotros {
+      font-size: 2.5rem;
+    }
+  
+    .card-descripcion-empresa {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  
+    .btn-contacto {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }

@@ -1,0 +1,84 @@
+.navbar {
+  position: sticky !important; /* !important después de la propiedad */
+  top: 0;
+  width: 100%;
+  background-color: #ebebec;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(170, 176, 207, 0.2);
+}
+
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.navbarLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  color: #000; 
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.navLink:active {
+  background-color: #777;
+}
+
+/* 🔥 Responsive - Modo Móvil */
+@media screen and (max-width: 768px) {
+  .menuButton {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .navbarLinks {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: #ebebec;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;  /* Ocultamos por defecto */
+  }
+
+  /* Mostrar menú cuando se active */
+  .navbarLinks.active {
+      display: flex;
+  }
+
+  .navItem {
+      margin: 10px 0;
+      text-align: center;
+  }
+}
